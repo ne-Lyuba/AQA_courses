@@ -24,7 +24,7 @@ public interface MakeupProductInterface {
     /**
      * Apply the makeup product.
      */
-    void apply();
+    void apply() throws MakeupException;
 
     /**
      * Check if the makeup product is suitable for a specific skin type.
@@ -45,6 +45,8 @@ public interface MakeupProductInterface {
     interface MakeupRemover {
         void removeMakeup();
     }
+
+
 
     /**
      * This is a nested enum representing different types of makeup products.

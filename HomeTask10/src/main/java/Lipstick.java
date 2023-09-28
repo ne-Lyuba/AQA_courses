@@ -18,8 +18,11 @@ final class Lipstick extends MakeupProduct {
     }
 
     @Override
-    public void apply() {
+    public void apply() throws MakeupException {
         System.out.println("Applying " + brand + " " + name + " lipstick in " + colour + " colour.");
+        if (Math.random() < 0.5) {
+            throw new MakeupException("Lipstick application failed.");
+        }
     }
 
     @Override
